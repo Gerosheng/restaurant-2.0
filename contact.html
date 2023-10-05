@@ -41,13 +41,95 @@
           </div>
         </nav>  
       </header>
+    
+    <main class="container-md">
 
+      <h1 class="display-1">Contact</h1>
+      <h2>Get in touch with us!</h2>
+
+      <form class="row g-3 needs-validation">
+
+          <div class="col-md-6">
+            <label for="fname" class="form-label">First name</label>
+            <input type="text" class="form-control" id="fname" required>
+            <div class="valid-feedback">All good!</div>
+            <div class="invalid-feedback">Please provide your first name</div>
+          </div>
+          <div class="col-md-6">
+            <label for="lname" class="form-label">Last name</label>
+            <input type="text" id="lname" class="form-control" required>
+            <div class="valid-feedback">All good!</div>
+            <div class="invalid-feedback">Please provide your last name</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">Your email address</label>
+            <input type="email" class="form-control" id="email" placeholder="youremail@mail.com" required>
+            <div class="valid-feedback">All good!</div>
+            <div class="invalid-feedback">Please provide a valid email address</div>
+          </div>
+          <div class="col-md-6">
+            <label for="phoneNum" class="form-label">Your phone number</label>
+            <input type="tel" id="phoneNum" class="form-control" placeholder="Enter your phone number" pattern="^0[1-9]\d{7}$" required>
+            <div class="valid-feedback">All good!</div>
+            <div class="invalid-feedback">Please provide a valid phone number</div>
+          </div>
+
+          <div class="col-12">
+            <div class="input-group">
+              <label for="restaurant" class="input-group-text">Restaurant</label>
+              <select class="form-select" aria-label="Default restaurant" id="restaurant" required>
+                <option value="xxx">Brussels</option>
+                <option value="xxx">Antwerp</option>
+                <option value="xxx">Gent</option>
+                <option value="xxx">Namur</option>
+                <option value="xxx">Liège</option>
+              </select>
+            </div>
+            <div class="valid-feedback">All good!</div>
+            <div class="invalid-feedback">Please select a location</div>
+          </div>
+
+          <div class="col-12">
+            <label for="message" class="form-label">Your message</label>
+            <textarea class="form-control" id="message" rows="auto" cols="auto" placeholder="Write your message here" required></textarea>
+            <div class="valid-feedback">All good!</div>
+            <div class="invalid-feedback">Please write the content of your message</div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="newsletter">
+              <label class="form-check-label" for="newsletter">I want to subscribe to the newsletter to receive deals and be informed of upcoming events</label>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="termsAndCond" required>
+              <label class="form-check-label" for="termsAndCond">I agree to the Terms and Conditions regarding personal info blabla</label>
+            </div>
+            <div class="valid-feedback">All good!</div>
+            <div class="invalid-feedback">You must agree before submitting</div>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+
+      </form>
+
+
+
+
+    </main>
 
 
 
 
   
       <footer>
+
         <div class="container">
           <nav class="nav nav-pills flex-column flex-md-row">
             <a class="flex-md-fill text-md-center nav-link" href="index.html">Home</a>
