@@ -1,6 +1,9 @@
 # Restaurant CSS Framework - Exercice Bootstrap
 Exercice de consolidation dans l'apprentissage de l'utilisation de Bootstrap. Le but étant de créer un site web pour un restaurant fictif en utilisant majoritairement le framework "Bootstrap".
 
+## Checkout the project
+https://gerosheng.github.io/restaurant-css-framework/
+
 ## Lien des consignes 
 https://github.com/becodeorg/Swartz-8/blob/main/1.The-Field/10.Bootstrap/restaurant.adoc
 
