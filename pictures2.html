@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 ">
+    <title>Gallery - Crumbs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">        
+    <link rel="icon" type="image/x-icon" href="/assets/image/brand/favicon.ico.png">
+
+  </head>
+  <body class="d-flex flex-column vh-100">
+
+    <header class="sticky-top">
+      <nav class="navbar sticky-top navbar-expand-md shadow" style="background-color: #F6C667;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/image/brand/logo_transparent (1).png" alt="Logo" width="60vh" height="60vh">
+              </a>
+              <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"> -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">              
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="pictures.html">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="restaurants.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn" type="submit">Search</button>
+                </form>
+              </div>
+          </div>
+        </nav>  
+      </header>
+    
+    <main class="container-md text-center">
+        <h1 class="display-1">Gallery</h1>
+        <h2 class="display-3">Pasta</h2>
+        <p> Our pasta section is a culinary journey through Italy's rich traditions, offering a delightful selection of pasta dishes that cater to all tastes. From the timeless comfort of a Spaghetti Bolognese to the elegance of our Lobster Ravioli, our pasta dishes are crafted with precision and love. We take pride in using only the finest ingredients and time-honored recipes to bring you a taste of Italy with every forkful. Explore our pasta creations and savor the artistry that awaits in every dish.</p>
+        <div class="container text-center my-4 p-3" id="image panel" style="background-color: #faeed5;">
+          <div class="row">
+            <div class="col-md-4">
+              <p>Get ready for a fiery kick with our Arrabiata pasta, where al dente pasta meets a bold and spicy tomato sauce, creating a pasta dish that's both bold and flavorful.</p>
+              <a href="/menu.html#PastaMenu"><img src="assets/image/pasta/arrabiata (1).jpg" class="img-thumbnail" alt="Arrabiata Pasta"></a>
+            </div>
+            <div class="col-md-4 d-md-flex flex-md-column-reverse">
+              <p>Savor the taste of the sea in every bite with our Clams Pasta, where tender clams are lovingly paired with perfectly cooked pasta and a garlicky white wine sauce.</p>
+              <a href="/menu.html#PastaMenu"><img src="assets/image/pasta/clams.jpg" class="img-thumbnail" alt="Clams Pasta"></a>
+            </div>
+            <div class="col-md-4">
+              <p>Layers of indulgence await in our Lasagna, a comforting Italian classic featuring rich, savory Bolognese sauce, creamy béchamel, and melted cheese, baked to perfection.</p>
+              <a href="/menu.html#PastaMenu"><img src="assets/image/pasta/lasagna (1).jpg" class="img-thumbnail" alt="Lasagna"></a>
+            </div>
+          </div>
+        </div>
+        <nav aria-label="Gallery navigation pages">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="pictures.html">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="pictures.html">1</a></li>
+              <li class="page-item active disabled" aria-current="page"><a class="page-link" href="pictures2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="pictures3.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="pictures3.html">Next</a></li>
+            </ul>
+          </nav>
+
+
+    </main>
+
+
+  
+    <footer class="mt-auto" style="background-color:#F6C667;">
+        <div class="container">
+          <nav class="nav nav-pills flex-column flex-md-row">
+            <a class="flex-md-fill text-md-center nav-link link-danger" href="index.html">Home</a>
+            <a class="flex-md-fill text-md-center nav-link link-danger" href="menu.html">Menu</a>
+            <a class="flex-md-fill text-md-center nav-link link-danger" href="pictures.html">Gallery</a>
+            <a class="flex-md-fill text-md-center nav-link link-danger" href="restaurants.html">About</a>
+            <a class="flex-md-fill text-md-center nav-link link-danger" href="contact.html">Contact</a>
+  
+          </nav>
+          <hr>
+          <p> (c)2023 All Rights Reserved</p>
+
+        </div>
+      </footer>
+  
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+</body>
+</body>
+</html>

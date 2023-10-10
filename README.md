@@ -1,6 +1,15 @@
 # Restaurant CSS Framework - Exercice Bootstrap
 Exercice de consolidation dans l'apprentissage de l'utilisation de Bootstrap. Le but étant de créer un site web pour un restaurant fictif en utilisant majoritairement le framework "Bootstrap".
 
+## Checkout the project
+https://gerosheng.github.io/restaurant-css-framework/
+
+![Website desktop frontpage](/assets/image/markdown/desktop.PNG)
+*Desktop Website frontpage*
+
+![Website mobile frontpage](/assets/image/markdown/mobile.PNG)
+*Mobile Website frontpage*
+
 ## Lien des consignes 
 https://github.com/becodeorg/Swartz-8/blob/main/1.The-Field/10.Bootstrap/restaurant.adoc
 
@@ -27,6 +36,7 @@ Site web **responsive** pour au moins _petits_ et *grands* écrans avec au moins
 
 ## Statut
 - Début de projet (03/10/23)
+- Finalisation (10/10/23)
 ## Construit avec
 - HTML
 - CSS
@@ -35,3 +45,9 @@ Site web **responsive** pour au moins _petits_ et *grands* écrans avec au moins
 ## Auteur
 
 - Jérôme Coeckelbergh
+
+## Sources
+
+- Unsplash 
+- Dribble
+
