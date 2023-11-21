@@ -4,10 +4,10 @@ Exercice de consolidation dans l'apprentissage de l'utilisation de Bootstrap. Le
 ## Checkout the project
 https://gerosheng.github.io/restaurant-css-framework/
 
-![Website desktop frontpage](/assets/image/markdown/desktop.PNG)
+![Website desktop frontpage](public/assets/image/markdown/desktop.PNG)
 *Desktop Website frontpage*
 
-![Website mobile frontpage](/assets/image/markdown/mobile.PNG)
+![Website mobile frontpage](public/assets/image/markdown/mobile.PNG)
 *Mobile Website frontpage*
 
 ## Lien des consignes 
