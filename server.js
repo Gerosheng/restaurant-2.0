@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const fs = require('fs');
+
 
 dotenv.config();
 
@@ -9,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Connect to MongoDB
-mongoose.connect(process.env.DB_CONNECTING_STRING, {
+mongoose.connect(process.env.DB_CONNECTION_STRING, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -19,6 +21,8 @@ app.use(express.json());
 
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.static(path.join(__dirname, 'views')));
 
 // Routes setup
 const indexRoute = require('./routes/index');
@@ -39,10 +43,28 @@ app.use('/picture3', picture3Route);
 app.use('/restaurants', restaurantsRoute);
 app.use('/admin', adminRoute);
 
+// Define a route for serving HTML files
+app.get('/:page', (req, res) => {
+  const requestedPage = req.params.page;
+  const filePath = path.join(__dirname, 'views', `${requestedPage}.html`);
+
+  // Check if the requested HTML file exists
+  if (fs.existsSync(filePath)) {
+    res.sendFile(filePath);
+  } else {
+    // If the file doesn't exist, handle it as a 404 error
+    res.status(404).send('Not Found');
+  }
+});
+
+// Define a route for the homepage (index.html)
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
 
 // Define a route for the homepage
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'views'));
 });
 
 // Start the server
