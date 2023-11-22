@@ -51,30 +51,30 @@
       <h1 class="display-1">Contact</h1>
       <h2>Get in touch with us!</h2>
 
-      <form class="row g-3 needs-validation">
+      <form class="row g-3 needs-validation" action="/submit-form" method="post">
 
           <div class="col-md-6">
             <label for="fname" class="form-label">First name</label>
-            <input type="text" class="form-control" id="fname" required>
+            <input type="text" name="firstname" class="form-control" id="fname" required>
             <div class="valid-feedback">All good!</div>
             <div class="invalid-feedback">Please provide your first name</div>
           </div>
           <div class="col-md-6">
             <label for="lname" class="form-label">Last name</label>
-            <input type="text" id="lname" class="form-control" required>
+            <input type="text" name="lastname" id="lname" class="form-control" required>
             <div class="valid-feedback">All good!</div>
             <div class="invalid-feedback">Please provide your last name</div>
           </div>
 
           <div class="col-md-6">
             <label for="email" class="form-label">Your email address</label>
-            <input type="email" class="form-control" id="email" placeholder="youremail@mail.com" required>
+            <input type="email" name="email" class="form-control" id="email" placeholder="youremail@mail.com" required>
             <div class="valid-feedback">All good!</div>
             <div class="invalid-feedback">Please provide a valid email address</div>
           </div>
           <div class="col-md-6">
             <label for="phoneNum" class="form-label">Your phone number</label>
-            <input type="tel" id="phoneNum" class="form-control" placeholder="Enter your phone number" pattern="^0[1-9]\d{7}$" required>
+            <input type="tel" name="phone" id="phoneNum" class="form-control" placeholder="Enter your phone number" pattern="^0[1-9]\d{7}$" required>
             <div class="valid-feedback">All good!</div>
             <div class="invalid-feedback">Please provide a valid phone number</div>
           </div>
@@ -82,12 +82,12 @@
           <div class="col-12">
             <div class="input-group">
               <label for="restaurant" class="input-group-text">Restaurant</label>
-              <select class="form-select" aria-label="Default restaurant" id="restaurant" required>
-                <option value="xxx">Brussels</option>
-                <option value="xxx">Antwerp</option>
-                <option value="xxx">Gent</option>
-                <option value="xxx">Namur</option>
-                <option value="xxx">Liège</option>
+              <select name="restaurant" class="form-select" aria-label="Default restaurant" id="restaurant" required>
+                <option value="Brussels">Brussels</option>
+                <option value="Antwerp">Antwerp</option>
+                <option value="Gent">Gent</option>
+                <option value="Namur">Namur</option>
+                <option value="Liège">Liège</option>
               </select>
             </div>
             <div class="valid-feedback">All good!</div>
@@ -96,7 +96,7 @@
 
           <div class="col-12">
             <label for="message" class="form-label">Your message</label>
-            <textarea class="form-control" id="message" rows="auto" cols="auto" placeholder="Write your message here" required></textarea>
+            <textarea name="message" class="form-control" id="message" rows="auto" cols="auto" placeholder="Write your message here" required></textarea>
             <div class="valid-feedback">All good!</div>
             <div class="invalid-feedback">Please write the content of your message</div>
           </div>

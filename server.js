@@ -3,7 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const fs = require('fs');
-
+const Email = require('./models/email');
 
 dotenv.config();
 
@@ -43,6 +43,28 @@ app.use('/picture3', picture3Route);
 app.use('/restaurants', restaurantsRoute);
 app.use('/admin', adminRoute);
 
+app.post('/submit-form', async (req, res) => {
+  try {
+    // Create a new contact form entry using the Mongoose model
+    const newContact = new Email({
+      firstname: req.body.fname,
+      lastname: req.body.lname,
+      email: req.body.email,
+      phone: req.body.phoneNum,
+      restaurant: req.body.restaurant,
+      message: req.body.message,
+      subscribeNewsletter: req.body.newsletter === 'on',
+    });
+
+    // Save the new contact form entry to MongoDB
+    await newContact.save();
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+  });
+
 // Define a route for serving HTML files
 app.get('/:page', (req, res) => {
   const requestedPage = req.params.page;
@@ -55,16 +77,6 @@ app.get('/:page', (req, res) => {
     // If the file doesn't exist, handle it as a 404 error
     res.status(404).send('Not Found');
   }
-});
-
-// Define a route for the homepage (index.html)
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'index.html'));
-});
-
-// Define a route for the homepage
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views'));
 });
 
 // Start the server
