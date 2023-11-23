@@ -7,7 +7,7 @@ const emailSchema = new mongoose.Schema({
     phone:{type: Number, required: true},
     restaurant: {type: String, required: true},
     message: {type: String, required: true},
-    subscribeNewsletter:{Boolean},
+    subscribeNewsletter:{type: Boolean},
     createdAt: { type: Date, default: Date.now},
 });
 

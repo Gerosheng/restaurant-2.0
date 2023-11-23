@@ -43,7 +43,7 @@ app.use('/picture3', picture3Route);
 app.use('/restaurants', restaurantsRoute);
 app.use('/admin', adminRoute);
 
-app.post('/submit-form', async (req, res) => {
+/**app.post('/submit-form', async (req, res) => {
   try {
     // Create a new contact form entry using the Mongoose model
     const newContact = new Email({
@@ -64,7 +64,7 @@ app.post('/submit-form', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
   });
-
+**/
 // Define a route for serving HTML files
 app.get('/:page', (req, res) => {
   const requestedPage = req.params.page;
