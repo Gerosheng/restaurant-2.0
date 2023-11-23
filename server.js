@@ -32,7 +32,7 @@ const pictureRoute = require('./routes/picture');
 const picture2Route = require('./routes/picture2');
 const picture3Route = require('./routes/picture3');
 const restaurantsRoute = require('./routes/restaurants');
-const adminRoute = require('./routes/admin');
+const dashboardRoute = require('./routes/dashboard');
 
 app.use('/', indexRoute);
 app.use('/contact', contactRoute);
@@ -41,7 +41,8 @@ app.use('/picture', pictureRoute);
 app.use('/picture2', picture2Route);
 app.use('/picture3', picture3Route);
 app.use('/restaurants', restaurantsRoute);
-app.use('/admin', adminRoute);
+app.use('/dashboard', dashboardRoute);
+
 
 /**app.post('/submit-form', async (req, res) => {
   try {
