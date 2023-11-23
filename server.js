@@ -10,6 +10,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Set EJS as the view engine
+app.set('view engine', 'ejs');
+
 // Connect to MongoDB
 mongoose.connect(process.env.DB_CONNECTION_STRING, {
   useNewUrlParser: true,
@@ -19,7 +22,7 @@ mongoose.connect(process.env.DB_CONNECTION_STRING, {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Serve static files from the 'public' directory
+// Serve static files from the 'public' and 'views' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.static(path.join(__dirname, 'views')));
