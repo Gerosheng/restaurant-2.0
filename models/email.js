@@ -8,7 +8,20 @@ const emailSchema = new mongoose.Schema({
     restaurant: {type: String, required: true},
     message: {type: String, required: true},
     subscribeNewsletter:{type: Boolean},
-    createdAt: { type: Date, default: Date.now},
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: function (createdAt) {
+          // Format the date to 'day/month/year, hour:minute'
+          return createdAt.toLocaleString('en-GB', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+          }).replace(/\//g, '-'); // Replace '/' with '-' for the desired format
+        },
+      },
 });
 
 const Email = mongoose.model('Email', emailSchema);

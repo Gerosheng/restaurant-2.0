@@ -39,6 +39,7 @@
                 <th scope="col">Phone</th>
                 <th scope="col">Restaurant</th>
                 <th scope="col">Message</th>
+                <th scope="col">Date</th>
                 <!-- Add more columns as needed -->
                 <th scope="col">Actions</th>
               </tr>
@@ -52,6 +53,8 @@
                   <td><%= email.phone %></td>
                   <td><%= email.restaurant %></td>
                   <td><%= email.message %></td>
+                  <td><%= email.createdAt %></td>
+
                   <!-- Add more columns as needed -->
                   <td>
                     <button class="btn btn-danger" onclick="deleteEmail('<%= email._id %>')">Delete</button>
