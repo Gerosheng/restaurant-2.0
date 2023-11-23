@@ -46,29 +46,6 @@ app.use('/picture3', picture3Route);
 app.use('/restaurants', restaurantsRoute);
 app.use('/dashboard', dashboardRoute);
 
-
-/**app.post('/submit-form', async (req, res) => {
-  try {
-    // Create a new contact form entry using the Mongoose model
-    const newContact = new Email({
-      firstname: req.body.fname,
-      lastname: req.body.lname,
-      email: req.body.email,
-      phone: req.body.phoneNum,
-      restaurant: req.body.restaurant,
-      message: req.body.message,
-      subscribeNewsletter: req.body.newsletter === 'on',
-    });
-
-    // Save the new contact form entry to MongoDB
-    await newContact.save();
-
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Internal Server Error');
-  }
-  });
-**/
 // Define a route for serving HTML files
 app.get('/:page', (req, res) => {
   const requestedPage = req.params.page;
